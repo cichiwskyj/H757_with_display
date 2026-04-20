@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "Core_M4",
+            "type": "stlinkgdbtarget",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "preBuild": "${command:st-stm32-ide-debug-launch.build}",
+            "runEntry": "main",
+            "imagesAndSymbols": [
+                {
+                    "imageFileName": "${workspaceFolder}/CM4/build/schieberschacht_h7_CM4.elf"
+                }
+            ],
+            "verbose": false,
+        },
+        {
+            "name": "Core_M7",
+            "type": "stlinkgdbtarget",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "preBuild": "${command:st-stm32-ide-debug-launch.build}",
+            "runEntry": "main",
+            "imagesAndSymbols": [
+                {
+                    "imageFileName": "${workspaceFolder}/CM7/build/schieberschacht_h7_CM7.elf"
+                }
+            ],
+            "verbose": false
+        }
+    ]
+}
