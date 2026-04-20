@@ -1,0 +1,8 @@
+{
+  "source": {
+    "sourceType": "STM32CubeMX"
+  },
+  "board": "STM32H757I-EVAL",
+  "device": "STM32H757XIH6",
+  "toolchain": "GCC"
+}

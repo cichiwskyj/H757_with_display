@@ -10,3 +10,7 @@ To be able to build the project, you need pull in the driver libraries for the e
 ```bash
 git submodule update --init --recursive
 ```
+
+We use VSCode and the [STM32CubeIDE Extension](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension) by ST.
+Install the extension, open the project directory, click on the STM32 Extension on the left, and then Setup STM32Cube project(s).
+By default it should have selected "Board/Device" as STM32H757I-EVAL, and "Toolchain" as GCC. Click Configure.
