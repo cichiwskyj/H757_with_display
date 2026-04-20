@@ -1,0 +1,6 @@
+[submodule "CM7/otm8009a"]
+	path = CM7/otm8009a
+	url = https://github.com/STMicroelectronics/stm32-otm8009a.git
+[submodule "CM7/is42s32800j"]
+	path = CM7/is42s32800j
+	url = https://github.com/STMicroelectronics/stm32-is42s32800j
