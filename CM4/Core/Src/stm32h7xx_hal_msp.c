@@ -388,6 +388,7 @@ void HAL_QSPI_MspDeInit(QSPI_HandleTypeDef* hqspi)
   */
 void HAL_SD_MspInit(SD_HandleTypeDef* hsd)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
   if(hsd->Instance==SDMMC1)
   {
@@ -406,6 +407,51 @@ void HAL_SD_MspInit(SD_HandleTypeDef* hsd)
 
     /* Peripheral clock enable */
     __HAL_RCC_SDMMC1_CLK_ENABLE();
+
+    __HAL_RCC_GPIOC_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    __HAL_RCC_GPIOD_CLK_ENABLE();
+    /**SDMMC1 GPIO Configuration
+    PC10     ------> SDMMC1_D2
+    PC11     ------> SDMMC1_D3
+    PC12     ------> SDMMC1_CK
+    PB9     ------> SDMMC1_CDIR
+    PB8     ------> SDMMC1_CKIN
+    PD2     ------> SDMMC1_CMD
+    PC8     ------> SDMMC1_D0
+    PC9     ------> SDMMC1_D1
+    PC7     ------> SDMMC1_D123DIR
+    PC6     ------> SDMMC1_D0DIR
+    */
+    GPIO_InitStruct.Pin = SDIO1_D2_Pin|SDIO1_D3_Pin|SDIO1_CLK_Pin|SDIO1_D0_Pin
+                          |SDIO1_D1_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF12_SDIO1;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = SDIO1_CDIR_Pin|SDIO1_CKIN_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF7_SDIO1;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = SDIO1_CMD_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF12_SDIO1;
+    HAL_GPIO_Init(SDIO1_CMD_GPIO_Port, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = SDIO1_D123DIR_Pin|SDIO1_D0DIR_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF8_SDIO1;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
     /* USER CODE BEGIN SDMMC1_MspInit 1 */
 
     /* USER CODE END SDMMC1_MspInit 1 */
@@ -429,6 +475,26 @@ void HAL_SD_MspDeInit(SD_HandleTypeDef* hsd)
     /* USER CODE END SDMMC1_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_SDMMC1_CLK_DISABLE();
+
+    /**SDMMC1 GPIO Configuration
+    PC10     ------> SDMMC1_D2
+    PC11     ------> SDMMC1_D3
+    PC12     ------> SDMMC1_CK
+    PB9     ------> SDMMC1_CDIR
+    PB8     ------> SDMMC1_CKIN
+    PD2     ------> SDMMC1_CMD
+    PC8     ------> SDMMC1_D0
+    PC9     ------> SDMMC1_D1
+    PC7     ------> SDMMC1_D123DIR
+    PC6     ------> SDMMC1_D0DIR
+    */
+    HAL_GPIO_DeInit(GPIOC, SDIO1_D2_Pin|SDIO1_D3_Pin|SDIO1_CLK_Pin|SDIO1_D0_Pin
+                          |SDIO1_D1_Pin|SDIO1_D123DIR_Pin|SDIO1_D0DIR_Pin);
+
+    HAL_GPIO_DeInit(GPIOB, SDIO1_CDIR_Pin|SDIO1_CKIN_Pin);
+
+    HAL_GPIO_DeInit(SDIO1_CMD_GPIO_Port, SDIO1_CMD_Pin);
+
     /* USER CODE BEGIN SDMMC1_MspDeInit 1 */
 
     /* USER CODE END SDMMC1_MspDeInit 1 */
