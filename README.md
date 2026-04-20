@@ -14,3 +14,11 @@ git submodule update --init --recursive
 We use VSCode and the [STM32CubeIDE Extension](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension) by ST.
 Install the extension, open the project directory, click on the STM32 Extension on the left, and then Setup STM32Cube project(s).
 By default it should have selected "Board/Device" as STM32H757I-EVAL, and "Toolchain" as GCC. Click Configure.
+
+## On recreating this project
+For completion's sake it is to note, that initially a config header has to be created for the is42s32800j driver to compile. Simply copy the file `CM7/is42s32800j/is42s32800j_conf_template.h` to `CM7/is42s32800j_conf.h`.
+
+The file ``CM7/CMakeLists.txt`` was extended to build the both external device drivers.
+
+## Build
+Once the STM32 extension has recognised the project, you can click on the small "Build" button at the bottom status bar to (re)configure and build. It is recommended to also install the [Microsoft's CMake extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) for more control over the CMake configuration steps.

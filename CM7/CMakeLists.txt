@@ -67,8 +67,9 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 # Add linked libraries
-target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined libraries
+target_link_libraries(${CMAKE_PROJECT_NAME}
+    is42s32800j_lib
+    otm8009a_lib
 )
 
 # Remove wrong libob.a library dependency when using cpp files
@@ -80,10 +81,39 @@ if((CMAKE_C_STANDARD EQUAL 90) OR (CMAKE_C_STANDARD EQUAL 99))
 endif()
 
 
+###########
+# Driver library for Eval board SDRAM, is42s32800j
+###########
+add_library(is42s32800j_lib OBJECT)
+target_sources(is42s32800j_lib PRIVATE is42s32800j/is42s32800j.c)
+target_include_directories(is42s32800j_lib 
+    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+)
+target_include_directories(is42s32800j_lib 
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/is42s32800j
+) 
 
+target_link_libraries(is42s32800j_lib
+    stm32cubemx
+    STM32_Drivers
+    ${TOOLCHAIN_LINK_LIBRARIES}
+)
 
+###########
+# Driver library for eval board LCD screen, otm8009a
+###########
 
+add_library(otm8009a_lib OBJECT)
+target_sources(otm8009a_lib PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/otm8009a/otm8009a.c ${CMAKE_CURRENT_SOURCE_DIR}/otm8009a/otm8009a_reg.c)
+# target_include_directories(otm8009a_lib 
+#     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+# )
+target_include_directories(otm8009a_lib 
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/otm8009a
+) 
 
-
-
-
+target_link_libraries(otm8009a_lib
+    stm32cubemx
+    STM32_Drivers
+    ${TOOLCHAIN_LINK_LIBRARIES}
+)
