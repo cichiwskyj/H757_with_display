@@ -1,0 +1,104 @@
+build
+mx.scratch
+!.settings
+.clangd
+
+# Created by https://www.toptal.com/developers/gitignore/api/c,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=c,visualstudiocode
+
+### C ###
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/c,visualstudiocode
+CM4/.cache/clangd/index/bsp_driver_sd.c.C7DF2FD79D793FD3.idx
+CM4/.cache/clangd/index/bsp_driver_sd.h.67FCC178B48DA243.idx
+CM4/.cache/clangd/index/dek_tasks.h.FABAB8BEF1F25F0D.idx
+CM4/.cache/clangd/index/fatfs_platform.h.EF6478E8014B361B.idx
+CM4/.cache/clangd/index/fatfs.c.11C610A18EB61286.idx
+CM4/.cache/clangd/index/fatfs.h.33D87571357E6122.idx
+CM4/.cache/clangd/index/ffconf.h.3D6E8F56F0D486DF.idx
+CM4/.cache/clangd/index/FreeRTOSConfig.h.FADBA03254510419.idx
+CM4/.cache/clangd/index/littlefs_fmc.h.BC5F3ECB235F37B9.idx
+CM4/.cache/clangd/index/littlefs.c.48EB244504809799.idx
+CM4/.cache/clangd/index/littlefs.h.7F8C40E1885DA91A.idx
+CM4/.cache/clangd/index/main.c.AA317ECC34A8BC57.idx
+CM4/.cache/clangd/index/main.h.03FD1C80F66EFE02.idx
+CM4/.cache/clangd/index/sd_diskio.h.3F93F84C2F46E373.idx
+CM4/.cache/clangd/index/sdcard.h.E9F301D958E28C60.idx
+CM4/.cache/clangd/index/startup_stm32h757xx_CM4.s.FE9D85F4A8DD4F68.idx
+CM4/.cache/clangd/index/stm32h7xx_hal_conf.h.4AA0D68AF5B6C8E5.idx
+CM4/.cache/clangd/index/stm32h7xx_hal_msp.c.0DAA2B80B6F97070.idx
+CM4/.cache/clangd/index/stm32h7xx_it.c.C243FB4CCD336EB4.idx
+CM4/.cache/clangd/index/stm32h7xx_it.h.EC9E6DAA567699BD.idx
+CM4/.cache/clangd/index/syscalls.c.CFCEC7C78BEF5788.idx
+CM4/.cache/clangd/index/sysmem.c.4CC88B4020A9AEC7.idx
