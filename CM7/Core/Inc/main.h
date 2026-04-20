@@ -75,8 +75,6 @@ void MX_ETH_Init(void);
 #define FMC_NWE_GPIO_Port GPIOD
 #define FMC_NOE_Pin GPIO_PIN_4
 #define FMC_NOE_GPIO_Port GPIOD
-#define SDIO1_D2_Pin GPIO_PIN_10
-#define SDIO1_D2_GPIO_Port GPIOC
 #define D25_Pin GPIO_PIN_1
 #define D25_GPIO_Port GPIOI
 #define D24_Pin GPIO_PIN_0
@@ -91,8 +89,6 @@ void MX_ETH_Init(void);
 #define RMII_TX_EN_GPIO_Port GPIOG
 #define FMC_NWAIT_Pin GPIO_PIN_6
 #define FMC_NWAIT_GPIO_Port GPIOD
-#define SDIO1_D3_Pin GPIO_PIN_11
-#define SDIO1_D3_GPIO_Port GPIOC
 #define D26_Pin GPIO_PIN_2
 #define D26_GPIO_Port GPIOI
 #define D23_Pin GPIO_PIN_15
@@ -111,8 +107,6 @@ void MX_ETH_Init(void);
 #define RMII_TXD1_GPIO_Port GPIOG
 #define FMC_NE1_Pin GPIO_PIN_7
 #define FMC_NE1_GPIO_Port GPIOD
-#define SDIO1_CLK_Pin GPIO_PIN_12
-#define SDIO1_CLK_GPIO_Port GPIOC
 #define D27__IS42S32800G_DQ27_Pin GPIO_PIN_3
 #define D27__IS42S32800G_DQ27_GPIO_Port GPIOI
 #define SAI1_SCKA_Pin GPIO_PIN_5
@@ -121,18 +115,12 @@ void MX_ETH_Init(void);
 #define SAI1_FSA_GPIO_Port GPIOE
 #define SAI1_SDB_Pin GPIO_PIN_3
 #define SAI1_SDB_GPIO_Port GPIOE
-#define SDIO1_CDIR_Pin GPIO_PIN_9
-#define SDIO1_CDIR_GPIO_Port GPIOB
-#define SDIO1_CKIN_Pin GPIO_PIN_8
-#define SDIO1_CKIN_GPIO_Port GPIOB
 #define SDNCAS_Pin GPIO_PIN_15
 #define SDNCAS_GPIO_Port GPIOG
 #define QSPI_BK2_IO3_Pin GPIO_PIN_14
 #define QSPI_BK2_IO3_GPIO_Port GPIOG
 #define RMII_TXD0_Pin GPIO_PIN_13
 #define RMII_TXD0_GPIO_Port GPIOG
-#define SDIO1_CMD_Pin GPIO_PIN_2
-#define SDIO1_CMD_GPIO_Port GPIOD
 #define D2_Pin GPIO_PIN_0
 #define D2_GPIO_Port GPIOD
 #define USB_FS2_VBUS_Pin GPIO_PIN_9
@@ -145,10 +133,6 @@ void MX_ETH_Init(void);
 #define SAI1_SDA_GPIO_Port GPIOE
 #define D3_Pin GPIO_PIN_1
 #define D3_GPIO_Port GPIOD
-#define SDIO1_D0_Pin GPIO_PIN_8
-#define SDIO1_D0_GPIO_Port GPIOC
-#define SDIO1_D1_Pin GPIO_PIN_9
-#define SDIO1_D1_GPIO_Port GPIOC
 #define MCO1_Pin GPIO_PIN_8
 #define MCO1_GPIO_Port GPIOA
 #define USB_FS2_DP_Pin GPIO_PIN_12
@@ -159,10 +143,6 @@ void MX_ETH_Init(void);
 #define D31_GPIO_Port GPIOI
 #define ULPI_DIR_Pin GPIO_PIN_11
 #define ULPI_DIR_GPIO_Port GPIOI
-#define SDIO1_D123DIR_Pin GPIO_PIN_7
-#define SDIO1_D123DIR_GPIO_Port GPIOC
-#define SDIO1_D0DIR_Pin GPIO_PIN_6
-#define SDIO1_D0DIR_GPIO_Port GPIOC
 #define SDCLK_Pin GPIO_PIN_8
 #define SDCLK_GPIO_Port GPIOG
 #define SAI1_MCLKA_Pin GPIO_PIN_7

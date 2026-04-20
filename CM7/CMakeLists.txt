@@ -87,10 +87,9 @@ endif()
 add_library(is42s32800j_lib OBJECT)
 target_sources(is42s32800j_lib PRIVATE is42s32800j/is42s32800j.c)
 target_include_directories(is42s32800j_lib 
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
-)
-target_include_directories(is42s32800j_lib 
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/is42s32800j
+    PUBLIC 
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/is42s32800j
 ) 
 
 target_link_libraries(is42s32800j_lib
