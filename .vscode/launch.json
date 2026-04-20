@@ -9,7 +9,7 @@
             "runEntry": "main",
             "imagesAndSymbols": [
                 {
-                    "imageFileName": "${workspaceFolder}/CM4/build/schieberschacht_h7_CM4.elf"
+                    "imageFileName": "${workspaceFolder}/CM4/build/H757_with_display_CM4.elf"
                 }
             ],
             "verbose": false,
@@ -23,7 +23,7 @@
             "runEntry": "main",
             "imagesAndSymbols": [
                 {
-                    "imageFileName": "${workspaceFolder}/CM7/build/schieberschacht_h7_CM7.elf"
+                    "imageFileName": "${workspaceFolder}/CM7/build/H757_with_display_CM7.elf"
                 }
             ],
             "verbose": false
